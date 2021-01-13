@@ -38,6 +38,12 @@ public class ProductResource {
 		return ResponseEntity.created(uri).body(newDto);
 	}
 	
+	@DeleteMapping(value = "/{id}")
+	public ResponseEntity<Void> delete(@PathVariable Long id) {
+		service.delete(id);
+		return ResponseEntity.noContent().build();
+	}
+	
 	@PutMapping(value = "/{id}")
 	public ResponseEntity<ProductDTO> update(@PathVariable Long id, @RequestBody ProductCategoriesDTO dto) {
 		ProductDTO newDto = service.update(id, dto);
