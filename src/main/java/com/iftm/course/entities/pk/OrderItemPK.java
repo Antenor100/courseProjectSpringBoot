@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Embeddable
 public class OrderItemPK implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "order_id")
 	private Order order;
@@ -65,6 +65,6 @@ public class OrderItemPK implements Serializable {
 		} else if (!product.equals(other.product))
 			return false;
 		return true;
-	}	
-
+	}
+	
 }
