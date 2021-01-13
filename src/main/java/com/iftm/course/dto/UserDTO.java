@@ -24,7 +24,7 @@ public class UserDTO {
 		this.id = entity.getId();
 		this.name = entity.getName();
 		this.email = entity.getEmail();
-		this.phone = entity.getEmail();
+		this.phone = entity.getPhone();
 	}
 
 	public Long getId() {
