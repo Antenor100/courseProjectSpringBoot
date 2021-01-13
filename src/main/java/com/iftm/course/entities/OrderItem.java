@@ -1,6 +1,5 @@
 package com.iftm.course.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.iftm.course.entities.pk.OrderItemPK;
 
 import javax.persistence.EmbeddedId;
@@ -30,7 +29,6 @@ public class OrderItem implements Serializable {
 		this.price = price;
 	}
 	
-	@JsonIgnore
 	public Order getOrder() {
 		return id.getOrder();
 	}
